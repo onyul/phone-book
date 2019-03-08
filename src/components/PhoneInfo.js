@@ -16,14 +16,14 @@ class PhoneInfo extends Component {
             margin:'8px'
         };
 
-        /* const {
+        const {
             name, phone, id
-        } = this.props.info; */
+        } = this.props.info;
 
-        const name = this.props.info.name;
-        const phone = this.props.info.phone;
-        const id = this.props.info.id;
-
+        // const name = this.props.info.name;
+        // const phone = this.props.info.phone;
+        // const id = this.props.info.id;
+        
         return(
             <div style={style}>
                 <div><b>{name}</b></div>

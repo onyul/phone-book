@@ -20,8 +20,8 @@ class App extends Component {
     }
 
     handleCreate = (data) => {
-        // const { information } = this.state;
-        const information = this.state.information;
+        const { information } = this.state;
+        // const information = this.state.information;
         this.setState({
             information:information.concat({ id: this.id++, ...data })
         })
@@ -32,8 +32,16 @@ class App extends Component {
             <div>
                 <PhoneForm
                     onCreate={this.handleCreate}
+                    /* PhoneForm.js :
+                     this.props.onCreate(this.state); 
+                    */
                 />
-                <PhoneInfoList data={this.state.information}/>
+                <PhoneInfoList data={this.state.information}
+                    /* PhoneInfoList.js :
+                    const list = data.map(
+                    info => (<PhoneInfo key={info.id} info={info}/>)
+                    */
+                />
             </div>
         );
     }
